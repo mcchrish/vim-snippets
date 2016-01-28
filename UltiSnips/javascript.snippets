@@ -168,4 +168,26 @@ snippet req "require an AMD module"
 require([${1:'dependencies'}], ${2:callback})
 endsnippet
 
+# Extras
+snippet use "use strict" b
+'use strict'
+endsnippet
+
+snippet mcall "Meteor Call" b
+Meteor.call('${1:name}', ${2:argument})
+endsnippet
+
+snippet mpub "Meteor Publish" b
+Meteor.publish('${1:name}', function (${2:argument}) {
+  ${3}
+})
+endsnippet
+
+snippet msub "Meteor Subscribe" b
+Meteor.subscribe('${1:name}', ${2:argument})
+endsnippet
+
+snippet mcol "Meteor Collection" b
+${1:collection} = new Mongo.Collection('${2:name}')
+endsnippet
 # vim:ft=snippets:
